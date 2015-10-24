@@ -1,4 +1,6 @@
-try: stage1.o
-	cc stage1.o -o try
-stage1.o: stage1.c
-	cc -Wall -c stage1.c
+try: file.o queue.o
+	cc file.o queue.o -o try
+file.o: file.c queue.h
+	cc -Wall -c file.c
+queue.o: queue.c queue.h
+	cc -Wall -c queue.c
