@@ -1,6 +1,6 @@
-try: file.o queue.o
-	cc file.o queue.o -o try
-file.o: file.c queue.h
-	cc -Wall -c file.c
-queue.o: queue.c queue.h
-	cc -Wall -c queue.c
+project: program.o useprogram.o
+	cc program.o useprogram.o -o project
+program.o: program.c program.h
+	cc -Wall -c program.c
+useprogram.o: useprogram.c program.h
+	cc -Wall -c useprogram.c
